@@ -1,9 +1,15 @@
 How to run?
-1.Git clone this repository into your pc.
-2.get into the root folder and run the command :
-python student_score_prediction.py
+->METHOD-1:
+	1.Git clone this repository into your pc.
+	2.get into the root folder and run the command :
+	python student_score_prediction.py
 
 OR
 
-cd ~/project/student_score_prediction/
-python student_score_prediction.py
+->METHOD-2:
+	->Open terminal and run this command:
+	
+	mkdir project
+	git clone https://github.com/lakshaydabasdabas-dot/project
+	cd ~/project/student_score_prediction/
+	python student_score_prediction.py
