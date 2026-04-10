@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Prediction - Visualization Report</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .visualization-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .visualization-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .visualization-item h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .visualization-item p {
+            color: #718096;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .insight-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .insight-box h4 {
+            color: #2b6cb0;
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .visualization-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Exam Score Prediction System</h1>
+            <p class="subtitle">Machine Learning Visualization Report</p>
+        </header>
+        
+        <section class="section">
+            <h2>Project Overview</h2>
+            <p>This project predicts student final exam scores based on academic performance indicators using machine learning. The visualizations below provide insights into the data and model performance.</p>
+            
+            <div class="insight-box">
+                <h4>Key Findings:</h4>
+                <p><strong>Best Model:</strong> Linear Regression (R² = 0.9999)</p>
+                <p><strong>Most Important Feature:</strong> Hours Studied (correlation: 0.626)</p>
+                <p><strong>Prediction Example:</strong> Student with 7.5 study hours, 90% attendance, 78 previous marks, and 8 assignments → Predicted Score: 91.87</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Data Analysis Visualizations</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>1. Correlation Heatmap</h3>
+                    <p>Shows relationships between all features. Darker red indicates stronger positive correlation.</p>
+                    <img src="visualization_outputs/correlation_heatmap.png" alt="Correlation Heatmap">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Hours studied has the strongest correlation (0.626) with final exam score, followed by previous marks (0.582).</p>
+                    </div>
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>2. Feature Distributions</h3>
+                    <p>Shows the distribution of each feature with mean values marked.</p>
+                    <img src="visualization_outputs/feature_distributions.png" alt="Feature Distributions">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Most students study 6 hours on average, attend 77% of classes, have previous marks around 69, and complete 6 assignments.</p>
+                    </div>
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>3. Feature vs Target Relationships</h3>
+                    <p>Scatter plots showing how each feature relates to the final exam score.</p>
+                    <img src="visualization_outputs/feature_vs_target.png" alt="Feature vs Target Relationships">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Clear positive relationships visible, especially for hours studied and previous marks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Model Performance Visualizations</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>4. Model Comparison</h3>
+                    <p>Compares three machine learning models using R² score and MAE.</p>
+                    <img src="visualization_outputs/model_comparison.png" alt="Model Comparison">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Linear Regression performs best with highest R² (0.9999) and lowest MAE (0.09).</p>
+                    </div>
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>5. Feature Importance (Random Forest)</h3>
+                    <p>Shows which features are most important for tree-based models.</p>
+                    <img src="visualization_outputs/feature_importance_RandomForestRegressor.png" alt="Feature Importance Random Forest">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Hours studied is the most important feature (0.747), followed by previous marks (0.147).</p>
+                    </div>
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>6. Residual Analysis (Linear Regression)</h3>
+                    <p>Analyzes prediction errors to check model assumptions.</p>
+                    <img src="visualization_outputs/residuals_Linear_Regression.png" alt="Residual Analysis">
+                    <div class="insight-box">
+                        <h4>Insight:</h4>
+                        <p>Residuals are randomly distributed around zero, indicating good model fit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Additional Visualizations</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>7. Feature Importance (Decision Tree)</h3>
+                    <p>Feature importance from Decision Tree model.</p>
+                    <img src="visualization_outputs/feature_importance_DecisionTreeRegressor.png" alt="Feature Importance Decision Tree">
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>8. Residuals (Decision Tree)</h3>
+                    <p>Error analysis for Decision Tree model.</p>
+                    <img src="visualization_outputs/residuals_Decision_Tree.png" alt="Residuals Decision Tree">
+                </div>
+                
+                <div class="visualization-item">
+                    <h3>9. Residuals (Random Forest)</h3>
+                    <p>Error analysis for Random Forest model.</p>
+                    <img src="visualization_outputs/residuals_Random_Forest.png" alt="Residuals Random Forest">
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Generated by Student Exam Score Prediction System | Machine Learning Project</p>
+            <p>All visualizations saved in: <code>visualization_outputs/</code> folder</p>
+        </footer>
+    </div>
+</body>
+</html>
