@@ -21,7 +21,7 @@ def build_score(hours_studied, attendance_percentage, previous_marks, assignment
         + (1.7 * assignments_completed)
         + noise
     )
-    return round(clamp(score, 35, 100), 2)
+    return round(clamp(score, 0, 100), 2)
 
 
 def main():
@@ -41,9 +41,9 @@ def main():
 
         for _ in range(ROW_COUNT):
             hours_studied = round(random.uniform(1.0, 10.0), 1)
-            attendance_percentage = random.randint(55, 100)
-            previous_marks = random.randint(40, 98)
-            assignments_completed = random.randint(2, 10)
+            attendance_percentage = random.randint(20, 100)
+            previous_marks = random.randint(0, 100)
+            assignments_completed = random.randint(0, 10)
             final_exam_score = build_score(
                 hours_studied,
                 attendance_percentage,
