@@ -1,7 +1,7 @@
-# Project
+# Project Knowledge Base
 
 ## Project Overview
-A centralized repository for documentation and planning of various development projects.
+A centralized knowledge repository for my ongoing exploration projects. Contains documentation, architecture planning, and research logs.
 
-## Tech Stack
-*   **Language**: HTML
+## Scope
+Provides a unified view for project tracking and development planning.
